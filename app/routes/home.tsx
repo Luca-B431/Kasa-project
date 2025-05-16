@@ -1,5 +1,17 @@
 import type { Route } from "./+types/home";
+import Banner from "../components/banner";
+import Gallery from "~/components/home/gallery";
 
 export default function Home({}: Route.ComponentProps) {
-  return <h1> "Kasa project" </h1>;
+  return (
+    <div className="flex-col justify-center items-center h-full bg-white">
+      <Banner
+        url={"assets/banner_homepage.png"}
+        text={"Chez vous, partout et ailleurs"}
+      />
+      <div>
+        <Gallery />
+      </div>
+    </div>
+  );
 }
