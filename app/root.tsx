@@ -7,6 +7,8 @@ import {
   ScrollRestoration,
 } from "react-router";
 import type { Route } from "./+types/root";
+import Header from "./components/layout/header";
+import Footer from "./components/layout/footer";
 import "./app.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -18,11 +20,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
+      <Header />
       <body>
         {children}
         <ScrollRestoration />
         <Scripts />
       </body>
+      <Footer />
     </html>
   );
 }
