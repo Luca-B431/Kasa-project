@@ -9,7 +9,7 @@ export default function Home({}: Route.ComponentProps) {
         url={"assets/banner_homepage.png"}
         text={"Chez vous, partout et ailleurs"}
       />
-      <div>
+      <div className="flex flex-col py-8 gap-12 h-full">
         <Gallery />
       </div>
     </div>
