@@ -14,7 +14,7 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col h-full bg-white w-full">
+    <div className="flex flex-col h-full bg-white max-w-screen-xl mx-auto">
       <Banner url={"/assets/banner_aboutpage.png"} text={""} />
       <div className="flex flex-col flex-grow pt-12 pb-32">
         <Collapse title={"Fiabilité"} text={texts[0]} />

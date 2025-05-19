@@ -35,7 +35,7 @@ export default function Collapse({
         </svg>
       </button>
       <div
-        className={`overflow-hidden transition-all duration-250 ease-linear mx-4 px-4 py-0 md:mx-24 bg-gray-100 rounded-sm ${
+        className={`overflow-hidden transition-all duration-100 ease-linear mx-4 px-4 py-0 md:mx-24 bg-gray-100 rounded-sm ${
           isOpen ? "max-h-96 py-4 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

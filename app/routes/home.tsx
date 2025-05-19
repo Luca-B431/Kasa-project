@@ -1,10 +1,10 @@
 import type { Route } from "./+types/home";
 import Banner from "../components/banner";
-import Gallery from "~/components/home/gallery";
+import Gallery from "~/components/home/mosaic";
 
 export default function Home({}: Route.ComponentProps) {
   return (
-    <div className="flex-col justify-center items-center h-full bg-white">
+    <div className="flex-col justify-center items-center h-full bg-white  max-w-screen-xl mx-auto">
       <Banner
         url={"assets/banner_homepage.png"}
         text={"Chez vous, partout et ailleurs"}
