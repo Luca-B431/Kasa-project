@@ -8,8 +8,8 @@ import {
   ScrollRestoration,
 } from "react-router";
 import type { Route } from "./+types/root";
-import Header from "./components/layout/header";
-import Footer from "./components/layout/footer";
+import Header from "./components/header";
+import Footer from "./components/footer";
 import "./app.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {

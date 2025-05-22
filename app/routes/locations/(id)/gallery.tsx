@@ -5,7 +5,7 @@ export default function Gallery({ pictures }: { pictures: string[] }) {
 
   return (
     <>
-      <div className="relative flex flex-col justify-center items-center bg-cover overflow-hidden rounded-xl mb-12 mx-4 md:mx-24 ease-in bg-no-repeat bg-center h-full">
+      <div className="relative flex flex-col justify-center items-center bg-cover overflow-hidden rounded-xl mb-4 mx-4 md:mx-24 ease-in bg-no-repeat bg-center h-full">
         {/* container-carrousel */}
         <div
           className="flex transition-transform duration-1000 ease-in-out w-full h-full"

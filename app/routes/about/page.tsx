@@ -1,5 +1,6 @@
-import Banner from "../components/banner";
-import Collapse from "../components/about/collapse";
+import type { Route } from "./+types/page";
+import Banner from "../../components/banner";
+import Collapse from "../../components/collapse";
 
 export function loader() {
   return { name: "Kasa About" };
@@ -14,9 +15,9 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col h-full bg-white max-w-screen-xl mx-auto">
+    <div className="flex flex-col h-full bg-white max-w-screen-xl mx-auto sm:mt-24 min-h-[100vh]">
       <Banner url={"/assets/banner_aboutpage.png"} text={""} />
-      <div className="flex flex-col flex-grow pt-12 pb-32">
+      <div className="flex flex-col flex-grow pt-12 pb-32  px-4 md:px-24 gap-12">
         <Collapse title={"Fiabilité"} text={texts[0]} />
         <Collapse title={"Respect"} text={texts[1]} />
         <Collapse title={"Service"} text={texts[2]} />

@@ -11,7 +11,7 @@ export default function Header() {
             alt="Logo"
           />
           <nav className="flex justify-center items-center">
-            <ul className="flex justify-between items-center md:gap-8">
+            <ul className="flex justify-between items-center gap-4 md:gap-8">
               <li className="px-2">
                 <NavLink
                   to="/"
@@ -26,7 +26,7 @@ export default function Header() {
                   to="/about"
                   className=" text-black  hover:underline text-[12px] md:text-2xl"
                 >
-                  <p className="block md:hidden"> À PROPOS</p>
+                  <p className="block md:hidden text-nowrap"> À PROPOS</p>
                   <p className="hidden md:block"> À propos </p>
                 </NavLink>
               </li>

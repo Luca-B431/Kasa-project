@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, href } from "react-router";
 
 export default function HomeCard({
   picture,
@@ -11,7 +11,7 @@ export default function HomeCard({
 }) {
   return (
     <>
-      <Link to={`/details/${id}`}>
+      <Link to={href(`/locations/:id`, { id })}>
         <div
           className="relative flex flex-col justify-end h-86 lg:h-64 xl:h-86 bg-cover rounded-xl"
           style={{ backgroundImage: `url(${picture})` }}
