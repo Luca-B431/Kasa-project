@@ -15,19 +15,27 @@ export default function Header() {
               <li className="px-2">
                 <NavLink
                   to="/"
-                  className=" text-black hover:underline  text-[12px] md:text-2xl"
+                  className={({ isActive }) =>
+                    `text-black text-[12px] md:text-2xl hover:underline ${
+                      isActive ? "underline" : ""
+                    }`
+                  }
                 >
                   <p className="block md:hidden">ACCUEIL</p>
-                  <p className="hidden md:block"> Accueil </p>
+                  <p className="hidden md:block">Accueil</p>
                 </NavLink>
               </li>
               <li>
                 <NavLink
                   to="/about"
-                  className=" text-black  hover:underline text-[12px] md:text-2xl"
+                  className={({ isActive }) =>
+                    `text-black text-[12px] md:text-2xl hover:underline ${
+                      isActive ? "underline" : ""
+                    }`
+                  }
                 >
-                  <p className="block md:hidden text-nowrap"> À PROPOS</p>
-                  <p className="hidden md:block"> À propos </p>
+                  <p className="block md:hidden text-nowrap">À PROPOS</p>
+                  <p className="hidden md:block">À propos</p>
                 </NavLink>
               </li>
             </ul>

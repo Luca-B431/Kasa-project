@@ -49,7 +49,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     message = error.status === 404 ? "404" : "Error";
     details =
       error.status === 404
-        ? "The requested page could not be found."
+        ? "Oups! La page que vous demandez n'existe pas."
         : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
@@ -57,11 +57,13 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="flex flex-col items-center justify-center gap-8 w-full h-screen p-4 text-center bg-white">
+    <main className="flex flex-col items-center justify-center gap-32 w-full h-screen p-4 text-center bg-white">
       <h1 className="text-[#FF6060] text-8xl md:text-[288px] font-bold">
         {message}
       </h1>
-      <p className="text-[#FF6060] text-center">{details}</p>
+      <p className="text-[#FF6060] text-xl md:text-4xl text-center">
+        {details}
+      </p>
       <Link to="/" className="text-sm md:text-xl underline">
         {" "}
         Retourner sur la page d'accueil{" "}

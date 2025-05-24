@@ -6,6 +6,19 @@ import Rating from "./rating";
 import Profile from "./profile";
 import data from "~/assets/data.json";
 
+// le loader est prioritaire et donc bloquant
+export async function loader({ params }: { params: { id: string } }) {
+  // j'ai l'item `id` dans les paramètres, je vais chercher l'élément correspondant dans les données
+  const location = data.find((item) => item.id === params.id);
+
+  // si l'élément n'est pas trouvé, je renvoie une erreur 404
+  if (!location) {
+    throw new Response("Not Found", { status: 404 });
+  }
+
+  return location;
+}
+
 export default function Details({ params }: Route.ComponentProps) {
   const { id } = params;
 
